@@ -1,13 +1,13 @@
-package co.edu.unbosque.proveedores;
+package co.edu.unbosque.ventas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProveedoresApplication {
+public class VentasApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProveedoresApplication.class, args);
+		SpringApplication.run(VentasApplication.class, args);
 	}
 
 }
