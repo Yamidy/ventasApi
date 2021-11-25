@@ -21,11 +21,11 @@ public class DetalleVentasService {
     }
 
 
-    public Optional<DetalleVenta> getDetalleVentaById(int id){
+    public Optional<DetalleVenta> getDetalleVentaById(String id){
         return DetalleVentasRepository.findById(id);
     }
 
-    public boolean deleteDetalleVenta(int id){
+    public boolean deleteDetalleVenta(String id){
         if(!DetalleVentasRepository.existsById(id)){
             return false;
         }

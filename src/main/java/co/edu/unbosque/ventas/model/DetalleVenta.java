@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class DetalleVenta {
 
     @Id
-    private int codigo_detalleVenta;
+    private String codigo_detalleVenta;
     private int codigo_producto;
     private int cantidad_producto;
     private double valor_total; //cantidad_producto x precioDelProducto (¿?)

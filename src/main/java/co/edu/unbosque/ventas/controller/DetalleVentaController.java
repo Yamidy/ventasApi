@@ -17,17 +17,17 @@ public class DetalleVentaController {
 
 
     @PostMapping
-    public void insertarCliente(@RequestBody DetalleVenta detalleVenta){
+    public void insertarDetalleVenta(@RequestBody DetalleVenta detalleVenta){
         detalleVentasService.insertDetalleVenta(detalleVenta);
     }
 
     @GetMapping("/{id}")
-    public Optional<DetalleVenta> getDetalleVenta(@PathVariable int id){
+    public Optional<DetalleVenta> getDetalleVenta(@PathVariable String id){
         return detalleVentasService.getDetalleVentaById(id);
      }
 
     @DeleteMapping("/{id}")
-    public boolean deleteDetalleVenta(@PathVariable int id){
+    public boolean deleteDetalleVenta(@PathVariable String id){
         return detalleVentasService.deleteDetalleVenta(id);
         }
 

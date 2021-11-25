@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Venta {
 
     @Id
-    private int codigo_venta;
+    private String codigo_venta;
     private int cedula_cliente;
     private ArrayList<DetalleVenta> detalle_venta;
     private double total_venta;

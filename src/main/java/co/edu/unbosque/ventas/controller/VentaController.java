@@ -28,18 +28,18 @@ public class VentaController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Venta> getVenta(@PathVariable int id){
+    public Optional<Venta> getVenta(@PathVariable String id){
         return ventasService.getVentaByCodigoVenta(id);
      }
 
     @DeleteMapping("/{id}")
-    public boolean deleteVenta(@PathVariable int id){
+    public boolean deleteVenta(@PathVariable String id){
         return ventasService.deleteVenta(id);
         }
 
-    @PutMapping
-    public boolean modificarVenta(@RequestBody Venta venta){
-        return ventasService.modificarVenta(venta);
+    @PutMapping("/{id}")
+    public boolean modificarVenta(@RequestBody Venta venta , @PathVariable String id){
+        return ventasService.modificarVenta(venta, id);
     }
 
 

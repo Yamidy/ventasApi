@@ -22,11 +22,11 @@ public class VentasService {
         return ventasRepository.findAll();
     }
 
-    public Optional<Venta> getVentaByCodigoVenta(int id){
+    public Optional<Venta> getVentaByCodigoVenta(String id){
         return ventasRepository.findById(id);
     }
 
-    public boolean deleteVenta(int id){
+    public boolean deleteVenta(String id){
         if(!ventasRepository.existsById(id)){
             return false;
         }
@@ -34,8 +34,8 @@ public class VentasService {
         return true;
     }
 
-    public boolean modificarVenta(Venta venta){
-        ventasRepository.save(venta);
-        return !ventasRepository.existsById(venta.getCodigo_venta());
+    public boolean modificarVenta(Venta venta, String id){
+        if(ventasRepository.existsById(id)) ventasRepository.save(venta);
+        return ventasRepository.existsById(id);
     }
 }
