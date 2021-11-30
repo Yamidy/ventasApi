@@ -16,8 +16,8 @@ public class DetalleVentasService {
 
     private DetalleVentasRepository DetalleVentasRepository;
 
-    public void insertDetalleVenta(DetalleVenta detalleVenta){
-        DetalleVentasRepository.save(detalleVenta);
+    public void insertListaDetalleVenta(List<DetalleVenta> detallesVenta){
+        DetalleVentasRepository.saveAll(detallesVenta);
     }
 
 

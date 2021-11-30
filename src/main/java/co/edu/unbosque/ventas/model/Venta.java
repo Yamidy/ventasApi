@@ -17,7 +17,7 @@ public class Venta {
     private String codigo_venta;
     private int cedula_cliente;
     private ArrayList<DetalleVenta> detalle_venta;
-    private double total_venta;
-    private double ivaventa;
-    private double valor_venta;
+    private double total_venta; // total venta sin iva
+    private double ivaventa; // total iva de la venta
+    private double valor_venta; // suma del total de la venta más el total del iva
 }

@@ -5,11 +5,13 @@ import co.edu.unbosque.ventas.service.DetalleVentasService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/detalleVentas")
+@CrossOrigin(origins="http://localhost:3000")
 public class DetalleVentaController {
 
 
@@ -17,8 +19,8 @@ public class DetalleVentaController {
 
 
     @PostMapping
-    public void insertarDetalleVenta(@RequestBody DetalleVenta detalleVenta){
-        detalleVentasService.insertDetalleVenta(detalleVenta);
+    public void insertarListaDetalleVenta(@RequestBody List<DetalleVenta> detallesVenta){
+        detalleVentasService.insertListaDetalleVenta(detallesVenta);
     }
 
     @GetMapping("/{id}")

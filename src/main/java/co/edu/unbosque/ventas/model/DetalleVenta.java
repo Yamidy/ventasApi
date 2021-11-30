@@ -11,6 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class DetalleVenta {
 
+    // Se considera un solo producto ¿?
+
     @Id
     private String codigo_detalleVenta;
     private int codigo_producto;
