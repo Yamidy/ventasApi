@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/ventas")
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="*")
 public class VentaController {
 
 
